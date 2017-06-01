@@ -14,6 +14,11 @@
     <param name="str" value="0.1" />	<!-- 直進1mあたりの回転方向の誤差[rad] -->
     <param name="stt" value="0.3" />	<!-- 回転1radあたりの回転方向の誤差[rad] -->
 
+    <param name="xmax" value="50" />
+    <param name="ymax" value="50" />
+    <param name="xmin" value="-50" />
+    <param name="ymin" value="-50" />
+
     <param name="particles" value="100" />
   </node>
 </launch>
