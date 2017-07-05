@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#encoding: utf8
 import sys, rospy, math, tf
 from pimouse_ros.msg import MotorFreqs
 from geometry_msgs.msg import Twist, Quaternion, TransformStamped, Point
@@ -9,7 +8,7 @@ from nav_msgs.msg import Odometry
 
 class Motor():
     def __init__(self):
-        if not self.set_power(False): sys.exit(1)   #モータの電源を切る
+        if not self.set_power(False): sys.exit(1)
 
         rospy.on_shutdown(self.set_power)
         self.sub_raw = rospy.Subscriber('motor_raw', MotorFreqs, self.callback_raw_freq)
